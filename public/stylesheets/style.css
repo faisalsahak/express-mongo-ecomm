@@ -7,3 +7,7 @@
 .price {
   font-weight: bold;
 }
+
+.images {
+  max-height: 300px
+}

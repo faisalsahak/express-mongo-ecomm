@@ -1,68 +1,70 @@
 const Product = require('../models/product');
+const mongoose = require('mongoose');
+mongoose.connect('localhost:27017/shopping')
 
-const product =[
+const products =[
   new Product({
-    imagePath: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLpCpGqC19ncbKmFHYF9I_cTVl6neLfAWf9II7j-H-FhIKNP5qS5YMlP-eb5zocXTPXaI',
+    imagePath: 'http://i.dailymail.co.uk/i/pix/2015/07/11/12/2A7018AF00000578-0-image-m-62_1436614857053.jpg',
     title: 'Fifa 2000',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 10
   }),
   new Product({
-    imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ThZfIN3NVTlOu6reh-G1WUBoUgo1ytcu_No8XSzriMqm_kMLW_KaHOMQN35RXKA1ISg',
+    imagePath: 'http://www.gifgratis.net/immagini/Psx/FICHE%20F/COVERS/Fifa_2001_Pal.jpg',
     title: 'Fifa 2001',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 12
   }),
   new Product({
-    imagePath: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSLEbYaUQURlM7p5-epFSka-rSHmccbXrHv_PlUoezXRMGugg1jDu-q-lyYoQimzQ4WMyU',
+    imagePath: 'http://www.music-bazaar.com/album-images/vol3/377/377083/2214936-big/FIFA-2002-2-picture.jpg',
     title: 'Fifa 2002',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 15
   }),
   new Product({
-    imagePath: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR1KdR4Q3tKXemlb2o_eLlEEVIikkH7fVlxSc9-V1wgLCZBvVFnyU_KqPFRICGL0qa5Mw4',
+    imagePath: 'http://www.mobygames.com/images/covers/l/19112-fifa-soccer-2003-playstation-2-front-cover.jpg',
     title: 'Fifa 2003',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 17
   }),
   new Product({
-    imagePath: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQhTCYelJOOMKHkKxFlQfmFxRpMi_3ctU7I4YvSUNWDY0JQg28DN8lBwxuybEx0vd_I27U',
+    imagePath: 'http://orig08.deviantart.net/da91/f/2014/286/0/3/fifa_2004_david_beckham_and_cristiano_ronaldo_by_thecoveruploader-d82ol7x.png',
     title: 'Fifa 2004',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 20
   }),
   new Product({
-    imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1L2glyXktP24Dpp94KIZhyIQvn6t0lbv6MvFCfUQdY5w8mR4ev9Pm3GJe0Dc_Wqw-DNE',
+    imagePath: 'https://upload.wikimedia.org/wikipedia/en/a/a8/FIFA_Football_2005_UK_cover.jpg',
     title: 'Fifa 2005',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 22
   }),
   new Product({
-    imagePath: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTMfdnWrz1nMFbvw24CpLjfGWfHy_B-ebXsh5d6rpIzKZ7nxhlbw-5o_KTk_miHLU9l69c',
+    imagePath: 'https://upload.wikimedia.org/wikipedia/en/e/e9/FIFA_06_UK_cover.jpg',
     title: 'Fifa 2006',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 25
   }),
   new Product({
-    imagePath: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR2s24LWW0m7t5MKtsd4VvYcDgu-DUQNHvbd1FtolDFnwgt2viug3kyTcqodAl1m1abYn4',
+    imagePath: 'https://upload.wikimedia.org/wikipedia/en/8/82/FIFA_07_UK_cover.jpg',
     title: 'Fifa 2007',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 28
   }),
   new Product({
-    imagePath: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSmhzHYMiBKI2X5W5dDxbIq7rctNyf8ptKXiJqVyGZN26jwYzWS8CYJjpfON2KltSVoMKY',
+    imagePath: 'https://upload.wikimedia.org/wikipedia/en/5/5f/FIFA_08_Coverart.png',
     title: 'Fifa 2008',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 30
   }),
   new Product({
-    imagePath: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTfG4ABz0-ZGYKDFbGZquRKlpn-r1_LfMWE91_9nPKw6oiM-DrvEU0p_6lihjws6tj4u6Y',
+    imagePath: 'https://clubvideomania.files.wordpress.com/2009/10/fifa-09-_front.jpg',
     title: 'Fifa 2009',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 33
   }),
   new Product({
-    imagePath: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSAkrEZJaEqDm02gpFEHNTYTP-44xhV4L1nKuIeJ8XTnedugJH-_jC5DLh1H8ly0gkXMmo',
+    imagePath: 'https://upload.wikimedia.org/wikipedia/en/2/24/FIFA_10_Cover.jpg',
     title: 'Fifa 2010',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 35
@@ -97,4 +99,29 @@ const product =[
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 50
   }),
+  new Product({
+    imagePath: 'http://www.ourfifa.com/upload/images/brazil.jpg',
+    title: 'Fifa 2016',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    price: 60
+  }),
+  new Product({
+    imagePath: 'http://images.performgroup.com/di/library/goal_uk/82/83/fifa-17-reus_14a2nwhxvgb7o1lrwc8wcri1e6.jpg?t=243878438',
+    title: 'Fifa 2017',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    price: 70
+  }),
 ]
+var done = 0;
+for(var i = 0; i < products.length; i++){
+  products[i].save(function(err, result){
+    done++;
+    if(done === products.length){
+      exit();
+    }
+  });
+}
+
+function exit(){
+  mongoose.disconnect();
+}
