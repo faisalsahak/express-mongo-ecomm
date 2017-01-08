@@ -9,7 +9,7 @@ var mongoose = require('mongoose')
 var index = require('./routes/index');
 
 var app = express();
-
+mongoose.connect('localhose:27017/shopping')
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
