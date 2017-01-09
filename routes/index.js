@@ -18,6 +18,10 @@ router.get('/signup', function(req, res){
   res.render('user/signup', {csrfToken: req.csrfToken()})
 });
 
+router.get('/login', function(req, res){
+  res.render('user/signin', {csrfToken: req.csrfToken()})
+});
+
 router.post('/signup', function(req, res, next){
   console.log({email: req.body.email, password: req.body.password})
 })
